@@ -1,4 +1,4 @@
-utils::data(cmocean)
+cmocean <- readRDS("cmocean.rds")
 algae <- grDevices::colorRampPalette(cmocean$algae)
 amp <- grDevices::colorRampPalette(cmocean$amp)
 balance <- grDevices::colorRampPalette(cmocean$balance)
