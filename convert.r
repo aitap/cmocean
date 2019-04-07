@@ -3,7 +3,13 @@ cmocean <- lapply(
 	setNames(argv, sub('-rgb.txt', '', basename(argv), fixed=T)),
 	function(f) rgb(read.table(f))
 )
+names(cmocean) <- ifelse(
+	names(cmocean) %in% c('diff', 'gray'),
+	paste0('cm', names(cmocean)),
+	names(cmocean)
+)
 saveRDS(cmocean, 'cmocean.rds')
+
 cat(
 	'export(',
 	paste(names(cmocean), collapse = ', '),
