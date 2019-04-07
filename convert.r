@@ -22,7 +22,7 @@ cat(
 	'cmocean <- readRDS("cmocean.rds")',
 	vapply(
 		names(cmocean),
-		function(n) sprintf("%s <- grDevices::colorRampPalette(cmocean$%s)", n, n),
+		function(n) sprintf("%s <- colorRampPalette(cmocean$%s)", n, n),
 		character(1)
 	),
 	file = 'R/functions.R',
