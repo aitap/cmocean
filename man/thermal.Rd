@@ -1,46 +1,26 @@
 \name{thermal}
 \alias{thermal}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Thermal colour palette
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Thermal palette is equential with dark blue representing lower,
+cooler values and transitioning through reds to yellow
+representing increased warmer values.
 }
 \usage{
 thermal(n)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{n}{
-%%     ~~Describe \code{n} here~~
+    integer giving the number of colours (>= 1) to be produced;
+	currently it does not make sense to ask for more than 256
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+  Vector of R colours (\code{'#RRGGBB'} strings) of length \code{n}.
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,
@@ -57,5 +37,4 @@ function (n)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ colour }
