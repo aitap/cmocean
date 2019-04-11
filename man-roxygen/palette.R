@@ -1,4 +1,4 @@
-#' @title <%= title %>
+#' @title <%= tools::toTitleCase(name) %> colour palette
 #' @description <%= description %>
 #' @param n integer giving the number of colours (>= 1) to be produced;
 #'          currently it does not make sense to ask for more than 256
