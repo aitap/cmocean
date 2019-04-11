@@ -10,6 +10,7 @@ names(cmocean) <- ifelse(
 	names(cmocean)
 )
 save(cmocean, file = 'R/sysdata.rda')
+tools::resaveRdaFiles('R/sysdata.rda')
 
 cat(
 	'load("R/sysdata.rda")',
