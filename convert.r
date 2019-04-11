@@ -8,10 +8,10 @@ names(cmocean) <- ifelse(
 	paste0('cm', names(cmocean)),
 	names(cmocean)
 )
-saveRDS(cmocean, 'cmocean.rds')
+save(cmocean, file = 'R/sysdata.rda')
 
 cat(
-	'cmocean <- readRDS("cmocean.rds")',
+	'load("R/sysdata.rda")',
 	vapply(
 		names(cmocean),
 		function(n) sprintf(

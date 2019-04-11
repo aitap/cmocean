@@ -1,4 +1,4 @@
-cmocean <- readRDS("cmocean.rds")
+load("R/sysdata.rda")
 #' @export
 algae <- grDevices::colorRampPalette(cmocean$algae)
 #' @export

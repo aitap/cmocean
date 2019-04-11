@@ -1,5 +1,3 @@
-#' @encoding UTF-8
-
 #' @details
 #' This package contains colormaps for commonly-used oceanographic
 #' variables. Most of the colormaps started from matplotlib
@@ -11,7 +9,7 @@
 #' DiMarco, S. F. (2016). True colors of oceanography. Oceanography,
 #' 29(3), 10.
 #'
-#' @keywords internal color
+#' @keywords color
 "_PACKAGE"
 
 #' @name thermal
@@ -106,7 +104,7 @@ NULL
 
 #' @name phase
 #' @templateVar name phase
-#' @templateVar description The phase colormap is circular, spanning all hues at a set lightness value. This map is intended to be used for properties such as wave phase and tidal phase which wrap around from 0˚ to 360˚ to 0˚ and should be represented without major perceptual jumps in the colormap.
+#' @templateVar description The phase colormap is circular, spanning all hues at a set lightness value. This map is intended to be used for properties such as wave phase and tidal phase which wrap around from 0° to 360° to 0° and should be represented without major perceptual jumps in the colormap.
 #' @template palette
 NULL
 

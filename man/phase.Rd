@@ -11,7 +11,7 @@ currently it does not make sense to ask for more than 256}
 Vector of R colours (\code{'#RRGGBB'} strings) of length \code{n}.
 }
 \description{
-The phase colormap is circular, spanning all hues at a set lightness value. This map is intended to be used for properties such as wave phase and tidal phase which wrap around from 0˚ to 360˚ to 0˚ and should be represented without major perceptual jumps in the colormap.
+The phase colormap is circular, spanning all hues at a set lightness value. This map is intended to be used for properties such as wave phase and tidal phase which wrap around from 0° to 360° to 0° and should be represented without major perceptual jumps in the colormap.
 }
 \examples{
 z <- xtabs(weight~Time+Chick, ChickWeight)
