@@ -11,20 +11,20 @@ names(cmocean) <- ifelse(
 saveRDS(cmocean, 'cmocean.rds')
 
 cat(
-	'export(',
-	paste(names(cmocean), collapse = ', '),
-	')\n',
-	'importFrom(grDevices, colorRampPalette)\n',
-	file = 'NAMESPACE',
-	sep = ''
-)
-cat(
 	'cmocean <- readRDS("cmocean.rds")',
 	vapply(
 		names(cmocean),
-		function(n) sprintf("%s <- colorRampPalette(cmocean$%s)", n, n),
+		function(n) sprintf(
+			paste(
+				"#' @export",
+				"%s <- grDevices::colorRampPalette(cmocean$%s)",
+				sep = "\n"
+			),
+			n, n
+		),
 		character(1)
 	),
 	file = 'R/functions.R',
 	sep = '\n'
 )
+roxygen2::roxygenise()

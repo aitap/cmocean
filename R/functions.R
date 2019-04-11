@@ -1,23 +1,45 @@
 cmocean <- readRDS("cmocean.rds")
-algae <- colorRampPalette(cmocean$algae)
-amp <- colorRampPalette(cmocean$amp)
-balance <- colorRampPalette(cmocean$balance)
-curl <- colorRampPalette(cmocean$curl)
-deep <- colorRampPalette(cmocean$deep)
-delta <- colorRampPalette(cmocean$delta)
-dense <- colorRampPalette(cmocean$dense)
-cmdiff <- colorRampPalette(cmocean$cmdiff)
-cmgray <- colorRampPalette(cmocean$cmgray)
-haline <- colorRampPalette(cmocean$haline)
-ice <- colorRampPalette(cmocean$ice)
-matter <- colorRampPalette(cmocean$matter)
-oxy <- colorRampPalette(cmocean$oxy)
-phase <- colorRampPalette(cmocean$phase)
-rain <- colorRampPalette(cmocean$rain)
-solar <- colorRampPalette(cmocean$solar)
-speed <- colorRampPalette(cmocean$speed)
-tarn <- colorRampPalette(cmocean$tarn)
-tempo <- colorRampPalette(cmocean$tempo)
-thermal <- colorRampPalette(cmocean$thermal)
-topo <- colorRampPalette(cmocean$topo)
-turbid <- colorRampPalette(cmocean$turbid)
+#' @export
+algae <- grDevices::colorRampPalette(cmocean$algae)
+#' @export
+amp <- grDevices::colorRampPalette(cmocean$amp)
+#' @export
+balance <- grDevices::colorRampPalette(cmocean$balance)
+#' @export
+curl <- grDevices::colorRampPalette(cmocean$curl)
+#' @export
+deep <- grDevices::colorRampPalette(cmocean$deep)
+#' @export
+delta <- grDevices::colorRampPalette(cmocean$delta)
+#' @export
+dense <- grDevices::colorRampPalette(cmocean$dense)
+#' @export
+cmdiff <- grDevices::colorRampPalette(cmocean$cmdiff)
+#' @export
+cmgray <- grDevices::colorRampPalette(cmocean$cmgray)
+#' @export
+haline <- grDevices::colorRampPalette(cmocean$haline)
+#' @export
+ice <- grDevices::colorRampPalette(cmocean$ice)
+#' @export
+matter <- grDevices::colorRampPalette(cmocean$matter)
+#' @export
+oxy <- grDevices::colorRampPalette(cmocean$oxy)
+#' @export
+phase <- grDevices::colorRampPalette(cmocean$phase)
+#' @export
+rain <- grDevices::colorRampPalette(cmocean$rain)
+#' @export
+solar <- grDevices::colorRampPalette(cmocean$solar)
+#' @export
+speed <- grDevices::colorRampPalette(cmocean$speed)
+#' @export
+tarn <- grDevices::colorRampPalette(cmocean$tarn)
+#' @export
+tempo <- grDevices::colorRampPalette(cmocean$tempo)
+#' @export
+thermal <- grDevices::colorRampPalette(cmocean$thermal)
+#' @export
+topo <- grDevices::colorRampPalette(cmocean$topo)
+#' @export
+turbid <- grDevices::colorRampPalette(cmocean$turbid)
