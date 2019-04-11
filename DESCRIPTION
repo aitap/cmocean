@@ -1,13 +1,14 @@
 Package: cmocean
 Encoding: UTF-8
-Version: 0.0
-Title: Beautiful Colormaps for Oceanography
+Version: 0.1
+Title: Beautiful Colourmaps for Oceanography
 Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
 Maintainer: Ivan Krylov <krylov.r00t@gmail.com>
 Depends: grDevices
 LazyData: no
-Description: A (one paragraph) description of what
-	the package does and why it may be useful.
+Description: Perceptually uniform palettes for commonly used
+	variables in oceanography as functions taking an integer
+	and producing character vectors	of colours.
 License: MIT + file LICENSE
 URL: https://matplotlib.org/cmocean/
 BugReports: https://github.com/aitap/cmocean

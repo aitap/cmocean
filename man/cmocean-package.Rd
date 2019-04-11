@@ -4,10 +4,11 @@
 \name{cmocean-package}
 \alias{cmocean}
 \alias{cmocean-package}
-\title{cmocean: Beautiful Colormaps for Oceanography}
+\title{cmocean: Beautiful Colourmaps for Oceanography}
 \description{
-A (one paragraph) description of what
-	the package does and why it may be useful.
+Perceptually uniform palettes for commonly used
+	variables in oceanography as functions taking an integer
+	and producing character vectors	of colours.
 }
 \details{
 This package contains colormaps for commonly-used oceanographic
