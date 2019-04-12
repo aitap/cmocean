@@ -4,7 +4,8 @@ Version: 0.1
 Title: Beautiful Colourmaps for Oceanography
 Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
 Maintainer: Ivan Krylov <krylov.r00t@gmail.com>
-Depends: R (>= 2.10), grDevices
+Depends: R (>= 3.0.0), grDevices
+Suggests: knitr
 LazyData: no
 Description: Perceptually uniform palettes for commonly used
 	variables in oceanography as functions taking an integer
@@ -12,4 +13,5 @@ Description: Perceptually uniform palettes for commonly used
 License: MIT + file LICENSE
 URL: https://matplotlib.org/cmocean/
 BugReports: https://github.com/aitap/cmocean
+VignetteBuilder: knitr
 RoxygenNote: 6.1.1

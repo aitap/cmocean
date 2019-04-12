@@ -1,0 +1,78 @@
+---
+title: "cmocean palettes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{cmocean palettes}
+  %\VignetteEncoding{UTF-8}
+---
+
+cmocean: beautiful colormaps for oceanography
+=============================================
+
+algae
+-----
+
+amp
+---
+
+balance
+-------
+
+cmdiff
+------
+
+cmgray
+------
+
+curl
+----
+
+deep
+----
+
+delta
+-----
+
+dense
+-----
+
+haline
+------
+
+ice
+---
+
+matter
+------
+
+oxy
+---
+
+phase
+-----
+
+rain
+----
+
+solar
+-----
+
+speed
+-----
+
+tarn
+----
+
+tempo
+-----
+
+thermal
+-------
+
+topo
+----
+
+turbid
+------
+
