@@ -36,5 +36,10 @@ Authors:
   \item Kristen Thyng \email{kthyng@gmail.com}
 }
 
+Other contributors:
+\itemize{
+  \item Clark Richards \email{clark.richards@gmail.com} [contributor]
+}
+
 }
 \keyword{color}
