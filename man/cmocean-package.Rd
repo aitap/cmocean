@@ -2,7 +2,6 @@
 % Please edit documentation in R/cmocean.R
 \docType{package}
 \name{cmocean-package}
-\alias{cmocean}
 \alias{cmocean-package}
 \title{cmocean: Beautiful Colourmaps for Oceanography}
 \description{
