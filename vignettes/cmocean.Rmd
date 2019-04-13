@@ -7,6 +7,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+Beautiful colormaps for oceanography: cmocean
+=============================================
+
 This package contains an R version of the [`cmocean`](https://matplotlib.org/cmocean/) color palettes for oceanography, developed originally for python by Kristen Thyng. The important detail of all the `cmocean` palettes is that they are all perceptually uniform.
 
 Users interested in the the details of the original package development should consult the publication:
