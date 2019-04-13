@@ -1,5 +1,5 @@
 ---
-title: "cmocean palettes"
+title: "Beautiful colormaps for oceanography: cmocean"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
@@ -7,72 +7,64 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-cmocean: beautiful colormaps for oceanography
-=============================================
+This package contains an R version of the [`cmocean`](https://matplotlib.org/cmocean/) color palettes for oceanography, developed originally for python by Kristen Thyng. The important detail of all the `cmocean` palettes is that they are all perceptually uniform.
 
-algae
------
+Users interested in the the details of the original package development should consult the publication:
 
-amp
----
+Thyng, K. M., Greene, C. A., Hetland, R. D., Zimmerle, H. M., & DiMarco, S. F. (2016). True colors of oceanography. Oceanography, 29(3), 10.
 
-balance
--------
+link: http://tos.org/oceanography/assets/docs/29-3_thyng.pdf
 
-cmdiff
-------
+Examples:
+=========
 
-cmgray
-------
+```{r, echo = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
 
-curl
-----
+The functions that return the colors are accessed using the `cmocean()` function, where the first argument is the name of the desired palette.
 
-deep
-----
+We can make a simple function to display the palette colors:
+```{r}
+library(cmocean)
+plot_cm <- function(name, n=256) {
+    z <- matrix(seq(0, 1, length.out=n))
+    image(z, col=cmocean(name)(n), axes=FALSE)
+    mtext(name, 3, adj=0)
+}
+```
 
-delta
------
+Below are examples of each of the `cmocean` palettes. Many more examples are provided at https://matplotlib.org/cmocean/
 
-dense
------
+palettes
+--------
 
-haline
-------
+```{r echo=FALSE}
+pal <- c('algae', 'amp', 'balance', 'diff',
+         'gray', 'curl', 'deep', 'delta',
+         'dense', 'haline', 'ice', 'matter',
+         'oxy', 'phase', 'rain', 'solar',
+         'speed', 'tarn', 'tempo', 'thermal',
+         'topo', 'turbid')
+opar <- par(no.readonly=TRUE)
+par(mfrow=c(6, 1), mar=c(0.5, 0.5, 1.5, 0.5))
+for (i in seq_along(pal)) {
+    plot_cm(pal[i])
+}
+par(mfrow=c(1, 1))
+par(opar)
+```
 
-ice
----
+Data examples:
+--------------
 
-matter
-------
-
-oxy
----
-
-phase
------
-
-rain
-----
-
-solar
------
-
-speed
------
-
-tarn
-----
-
-tempo
------
-
-thermal
--------
-
-topo
-----
-
-turbid
-------
-
+```{r}
+par(mar=c(2, 2, 1, 1), cex=0.5)
+image(volcano, col=cmocean('thermal')(256))
+```
+```{r}
+par(mar=c(2, 2, 1, 1), cex=0.5)
+x <- y <- seq(-4*pi, 4*pi, len = 27)
+r <- sqrt(outer(x^2, y^2, "+"))
+image(z = z <- cos(r^2)*exp(-r/6), col  = cmocean('haline')(256))
+```
