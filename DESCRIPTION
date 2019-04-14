@@ -15,4 +15,3 @@ License: MIT + file LICENSE
 URL: https://matplotlib.org/cmocean/
 BugReports: https://github.com/aitap/cmocean
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1

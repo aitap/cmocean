@@ -6,7 +6,6 @@ palettes <- lapply(
 )
 save(palettes, file = 'R/sysdata.rda')
 tools::resaveRdaFiles('R/sysdata.rda')
-roxygen2::roxygenise()
 unlink(Sys.glob('cmocean_*.tar.gz'))
 system('R CMD build .')
 pkg <- Sys.glob('cmocean_*.tar.gz')
