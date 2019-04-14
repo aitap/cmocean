@@ -3,7 +3,7 @@ title: "Beautiful colormaps for oceanography: cmocean"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{cmocean palettes}
+  %\VignetteIndexEntry{Beautiful colormaps for oceanography: cmocean}
   %\VignetteEncoding{UTF-8}
 ---
 
