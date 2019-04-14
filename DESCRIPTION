@@ -2,9 +2,10 @@ Package: cmocean
 Encoding: UTF-8
 Version: 0.1
 Title: Beautiful Colourmaps for Oceanography
-Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
+Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Clark', 'Richards', email = 'clark.richards@gmail.com', role = 'ctb'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
 Maintainer: Ivan Krylov <krylov.r00t@gmail.com>
-Depends: R (>= 3.0.0), grDevices
+Imports: grDevices
+Depends: R (>= 3.0.0)
 Suggests: knitr
 LazyData: no
 Description: Perceptually uniform palettes for commonly used
@@ -14,4 +15,3 @@ License: MIT + file LICENSE
 URL: https://matplotlib.org/cmocean/
 BugReports: https://github.com/aitap/cmocean
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
