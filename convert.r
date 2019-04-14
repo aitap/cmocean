@@ -1,9 +1,18 @@
 #!/usr/bin/r
-palettes <- Sys.glob('cmocean-python/cmocean/rgb/*-rgb.txt')
-palettes <- lapply(
-	setNames(palettes, sub('-rgb.txt', '', basename(palettes), fixed=T)),
-	read.table
-)
+palettes <- local({
+	lastwd <- getwd()
+	on.exit({system('git checkout master'); setwd(lastwd)})
+	setwd('cmocean-python')
+
+	lapply(setNames(nm = system('git tag', intern=T)), function(t) {
+		system(paste('git checkout', t))
+		rgb <- Sys.glob('cmocean/rgb/*-rgb.txt')
+		lapply(
+			setNames(rgb, sub('-rgb.txt', '', basename(rgb), fixed=T)),
+			read.table
+		)
+	})
+})
 save(palettes, file = 'R/sysdata.rda')
 tools::resaveRdaFiles('R/sysdata.rda')
 unlink(Sys.glob('cmocean_*.tar.gz'))
