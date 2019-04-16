@@ -1,6 +1,6 @@
 Package: cmocean
 Encoding: UTF-8
-Version: 0.1
+Version: 0.1-1
 Title: Beautiful Colour Maps for Oceanography
 Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Clark', 'Richards', email = 'clark.richards@gmail.com', role = 'ctb'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
 Maintainer: Ivan Krylov <krylov.r00t@gmail.com>
@@ -11,6 +11,9 @@ LazyData: no
 Description: Perceptually uniform palettes for commonly used
 	variables in oceanography as functions taking an integer
 	and producing character vectors	of colours.
+	See Thyng, K.M., Greene, C.A., Hetland, R.D., Zimmerle, H.M.
+	and S.F. DiMarco (2016) <doi:10.5670/oceanog.2016.66> for
+	the guidelines adhered to when creating the palettes.
 License: MIT + file LICENSE
 URL: https://matplotlib.org/cmocean/
 BugReports: https://github.com/aitap/cmocean
