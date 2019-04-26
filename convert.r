@@ -1,10 +1,38 @@
 #!/usr/bin/r
-palettes <- Sys.glob('cmocean-python/cmocean/rgb/*-rgb.txt')
-palettes <- lapply(
-	setNames(palettes, sub('-rgb.txt', '', basename(palettes), fixed=T)),
-	read.table
-)
+palettes <- local({
+	lastwd <- getwd()
+	on.exit({system('git checkout master'); setwd(lastwd)})
+	setwd('cmocean-python')
+
+	lapply(setNames(nm = system('git tag -l --sort=version:refname', intern=T)), function(t) {
+		system(paste('git checkout', t))
+		rgb <- Sys.glob('cmocean/rgb/*-rgb.txt')
+		lapply(
+			setNames(rgb, sub('-rgb.txt', '', basename(rgb), fixed=T)),
+			read.table
+		)
+	})
+})
 save(palettes, file = 'R/sysdata.rda')
+cat(
+	'latest_version <- \'',
+	names(palettes)[length(palettes)],
+	'\'\n',
+	file = 'R/latest.R',
+	sep = ''
+)
+
+options(useFancyQuotes = F)
+cmocean.man <- readLines('man/cmocean.Rd')
+cmocean.man[
+	grep('% LIST VERSIONS', cmocean.man, fixed=T) + 1
+] <- paste(
+	'\\code{',
+	paste(vapply(names(palettes), dQuote, character(1)), collapse = ' '),
+	'}'
+)
+writeLines(cmocean.man, 'man/cmocean.Rd')
+
 tools::resaveRdaFiles('R/sysdata.rda')
 unlink(Sys.glob('cmocean_*.tar.gz'))
 system('R CMD build .')
