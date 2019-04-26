@@ -21,6 +21,18 @@ cat(
 	file = 'R/latest.R',
 	sep = ''
 )
+
+options(useFancyQuotes = F)
+cmocean.man <- readLines('man/cmocean.Rd')
+cmocean.man[
+	grep('% LIST VERSIONS', cmocean.man, fixed=T) + 1
+] <- paste(
+	'\\code{',
+	paste(vapply(names(palettes), dQuote, character(1)), collapse = ' '),
+	'}'
+)
+writeLines(cmocean.man, 'man/cmocean.Rd')
+
 tools::resaveRdaFiles('R/sysdata.rda')
 unlink(Sys.glob('cmocean_*.tar.gz'))
 system('R CMD build .')

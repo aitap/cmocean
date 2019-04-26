@@ -6,7 +6,10 @@ Produce a palette function for a palette described by the first
 paramter.
 }
 \usage{
-cmocean(name, clip = 0, start = clip/2, end = 1 - clip/2)
+cmocean(
+  name, version = getOption("cmocean-version", latest_version),
+  clip = 0, start = clip/2, end = 1 - clip/2
+)
 }
 \arguments{
   \item{name}{
@@ -95,7 +98,7 @@ cmocean(name, clip = 0, start = clip/2, end = 1 - clip/2)
         represent an increase in wave period values. This
         colormap is the negative half of the \code{curl} colormap.
       }
-      \item{rain}{
+      \item{rain}{ % >= 2.0
         sequential from light, dry colors to blue, wet colors,
         and could be used to plot amounts of rainfall.
       }
@@ -106,7 +109,7 @@ cmocean(name, clip = 0, start = clip/2, end = 1 - clip/2)
         360° to 0° and should be represented without major
         perceptual jumps in the colormap.
       }
-      \item{topo}{
+      \item{topo}{ % >= 2.0
         The topo colormap has two distinct parts: one that is
         shades of blue and yellow to represent water depths
         (this is the \code{deep} colormap) and one that is
@@ -137,18 +140,29 @@ cmocean(name, clip = 0, start = clip/2, end = 1 - clip/2)
         diverging vorticity values around a critical value
         (usually zero).
       }
-      \item{diff}{
+      \item{diff}{ % >= 2.0
         diverging, with one side shades of blues and one side
         shades of browns.
       }
-      \item{tarn}{
+      \item{tarn}{ % >= 2.0
         diverging, with one side dry shades of browns and the
         other a range of greens and blues. The positive end of
         the colormap is meant to reflect the colors in rain and
         thus be a complementary colormap to rain for rain
         anomaly (around 0 or some other critical value).
       }
+      % < 1.0:
+      % "Bathymetry"  "CDOM"        "Chlorophyll" "Density"     "FreeSurface"
+      % "Gray"        "Oxygen"      "PAR"         "Phase"       "Salinity"
+      % "Speed"       "Temperature" "Turbidity"   "Velocity"    "Vorticity"
+      % "WaveHeight"  "WavePeriod"
     }
+  }
+
+  \item{version}{
+    specific \code{cmocean} version you would like to use;
+    one of: % LIST VERSIONS
+\code{ "0.03" "0.1" "0.2" "0.2.1" "0.2.2" "0.3" "1.0" "1.1" "1.2" "2.0" }
   }
 
   \item{clip}{
