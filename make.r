@@ -1,8 +1,7 @@
 #!/usr/bin/r
 palettes <- local({
-	lastwd <- getwd()
+	lastwd <- setwd('cmocean-python')
 	on.exit({system('git checkout master'); setwd(lastwd)})
-	setwd('cmocean-python')
 
 	lapply(setNames(nm = system('git tag -l --sort=version:refname', intern=T)), function(t) {
 		system(paste('git checkout', t))
@@ -13,8 +12,8 @@ palettes <- local({
 		)
 	})
 })
-save(palettes, file = 'R/sysdata.rda')
 
+save(palettes, file = 'R/sysdata.rda')
 tools::resaveRdaFiles('R/sysdata.rda')
 
 unlink(Sys.glob('cmocean_*.tar.gz'))
