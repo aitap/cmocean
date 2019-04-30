@@ -15,14 +15,6 @@ palettes <- local({
 })
 save(palettes, file = 'R/sysdata.rda')
 
-cat(
-	'latest_version <- \'',
-	names(palettes)[length(palettes)],
-	'\'\n',
-	file = 'R/latest.R',
-	sep = ''
-)
-
 tools::resaveRdaFiles('R/sysdata.rda')
 
 unlink(Sys.glob('cmocean_*.tar.gz'))
