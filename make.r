@@ -13,14 +13,14 @@ palettes <- local({
 	})
 })
 
-save(palettes, file = 'R/sysdata.rda')
-tools::resaveRdaFiles('R/sysdata.rda')
+save(palettes, file = 'R/sysdata.rda', version = 2)
+tools::resaveRdaFiles('R/sysdata.rda', version = 2)
 
 unlink(Sys.glob('cmocean_*.tar.gz'))
-system('R CMD build .')
+system('R CMD build . --no-resave-data')
 
 pkg <- Sys.glob('cmocean_*.tar.gz')
 stopifnot(length(pkg) == 1)
 
-system(paste('R CMD check --as-cran', pkg[1]))
+system(paste('R CMD check', pkg[1]))
 system(paste('R CMD INSTALL', pkg[1]))
