@@ -156,8 +156,8 @@ cmocean(
 
   \item{version}{
     specific \code{cmocean} version you would like to use;
-    one of: % LIST VERSIONS
-\code{ "0.03" "0.1" "0.2" "0.2.1" "0.2.2" "0.3" "1.0" "1.1" "1.2" "2.0" }
+    one of:
+\code{"0.03" "0.1" "0.2" "0.2.1" "0.2.2" "0.3" "1.0" "1.1" "1.2" "2.0"}
   }
 
   \item{clip}{

@@ -14,6 +14,7 @@ palettes <- local({
 	})
 })
 save(palettes, file = 'R/sysdata.rda')
+
 cat(
 	'latest_version <- \'',
 	names(palettes)[length(palettes)],
@@ -22,21 +23,13 @@ cat(
 	sep = ''
 )
 
-options(useFancyQuotes = F)
-cmocean.man <- readLines('man/cmocean.Rd')
-cmocean.man[
-	grep('% LIST VERSIONS', cmocean.man, fixed=T) + 1
-] <- paste(
-	'\\code{',
-	paste(vapply(names(palettes), dQuote, character(1)), collapse = ' '),
-	'}'
-)
-writeLines(cmocean.man, 'man/cmocean.Rd')
-
 tools::resaveRdaFiles('R/sysdata.rda')
+
 unlink(Sys.glob('cmocean_*.tar.gz'))
 system('R CMD build .')
+
 pkg <- Sys.glob('cmocean_*.tar.gz')
 stopifnot(length(pkg) == 1)
+
 system(paste('R CMD check --as-cran', pkg[1]))
 system(paste('R CMD INSTALL', pkg[1]))
