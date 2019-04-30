@@ -6,7 +6,7 @@ Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'
 Maintainer: Ivan Krylov <krylov.r00t@gmail.com>
 Imports: grDevices
 Depends: R (>= 3.0.0)
-Suggests: knitr
+Suggests: knitr, rmarkdown
 LazyData: no
 Description: Perceptually uniform palettes for commonly used
 	variables in oceanography as functions taking an integer
