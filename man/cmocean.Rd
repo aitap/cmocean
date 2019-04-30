@@ -155,9 +155,13 @@ cmocean(
   }
 
   \item{version}{
-    specific \code{cmocean} version you would like to use;
-    one of:
-\code{"0.03" "0.1" "0.2" "0.2.1" "0.2.2" "0.3" "1.0" "1.1" "1.2" "2.0"}
+    specific \code{cmocean} version you would like to use; one of:
+\code{"0.03" "0.1" "0.2" "0.2.1" "0.2.2" "0.3" "1.0" "1.1" "1.2" "2.0"}.
+    Alternatively, you can use \code{options(`cmocean-version`="...")}
+    to set the desired version as a global option. Explicitly
+    set argument overrides the global option; the global option
+    overrides the default of the latest version stored in the
+    package.
   }
 
   \item{clip}{
