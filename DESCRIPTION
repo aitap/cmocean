@@ -1,6 +1,6 @@
 Package: cmocean
 Encoding: UTF-8
-Version: 0.1-1
+Version: 0.2
 Title: Beautiful Colour Maps for Oceanography
 Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Clark', 'Richards', email = 'clark.richards@gmail.com', role = 'ctb'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
 Maintainer: Ivan Krylov <krylov.r00t@gmail.com>
