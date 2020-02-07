@@ -28,13 +28,19 @@ cmocean(
   }
 
   \item{clip}{
-    fraction of the colormap to clip (divided equally among both
-    sides).
+    fraction of the colormap to clip as a number between 0 and 1
+    (divided equally among both sides).
   }
 
-  \item{start}{fraction of the colormap to clip from its start.}
+  \item{start}{
+    fraction of the colormap to clip from its start (overrides
+    \code{clip}).
+  }
 
-  \item{end}{fraction of the colormap to clip from its end.}
+  \item{end}{
+    fraction of the colormap to clip from its end (overrides
+    \code{clip}).
+  }
 }
 \details{
   Names of available palettes depend on the version you would
@@ -178,7 +184,7 @@ cmocean(
   }
 }
 \value{
-  A function taking an integer and returns a character vector
+  A function taking an integer and returning a character vector
   with \code{'#RRGGBB'} colours. Currently, it does not make
   sense to request more than 256 of them.
 }

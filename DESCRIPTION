@@ -10,7 +10,7 @@ Suggests: knitr, rmarkdown
 LazyData: no
 Description: Perceptually uniform palettes for commonly used
 	variables in oceanography as functions taking an integer
-	and producing character vectors	of colours.
+	and producing character vectors of colours.
 	See Thyng, K.M., Greene, C.A., Hetland, R.D., Zimmerle, H.M.
 	and S.F. DiMarco (2016) <doi:10.5670/oceanog.2016.66> for
 	the guidelines adhered to when creating the palettes.
