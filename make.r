@@ -13,15 +13,10 @@ palettes <- local({
 	})
 })
 
-save(palettes, file = 'R/sysdata.rda', version = 2)
-if (utils::compareVersion(R.Version()$minor, '3.6') >= 0) {
-	tools::resaveRdaFiles('R/sysdata.rda', version = 2)
-} else {
-	tools::resaveRdaFiles('R/sysdata.rda')
-}
+save(palettes, file = 'R/sysdata.rda', version = 2, compress = 'xz')
 
 unlink(Sys.glob('cmocean_*.tar.gz'))
-system('R CMD build . --no-resave-data')
+system('R CMD build .')
 
 pkg <- Sys.glob('cmocean_*.tar.gz')
 stopifnot(length(pkg) == 1)
