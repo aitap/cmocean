@@ -1,4 +1,4 @@
-#!/usr/bin/r
+#!/usr/bin/Rscript
 palettes <- local({
 	lastwd <- setwd('cmocean-python')
 	on.exit({system('git checkout master'); setwd(lastwd)})
