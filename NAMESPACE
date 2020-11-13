@@ -1,2 +1,2 @@
 importFrom(grDevices, colorRampPalette, rgb)
-export(cmocean)
+export(cmocean, scale_colour_cmocean, scale_color_cmocean, scale_fill_cmocean)
