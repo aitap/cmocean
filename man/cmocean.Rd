@@ -8,7 +8,8 @@ paramter.
 \usage{
 cmocean(
   name, version = getOption("cmocean-version", "2.0"),
-  clip = 0, start = clip/2, end = 1 - clip/2
+  clip = 0, start = clip/2, end = 1 - clip/2,
+  direction = 1, alpha = 1
 )
 }
 \arguments{
@@ -40,6 +41,14 @@ cmocean(
   \item{end}{
     fraction of the colormap to clip from its end (overrides
     \code{clip}).
+  }
+
+  \item{direction}{
+    set to \code{-1} to reverse the palette.
+  }
+
+  \item{alpha}{
+    opacity of the palette in the range \eqn{[0, 1]}.
   }
 }
 \details{
@@ -189,13 +198,12 @@ cmocean(
   sense to request more than 256 of them.
 }
 \examples{
-  z <- xtabs(weight~Time+Chick, ChickWeight)
-  x <- sort(as.numeric(rownames(z)))
-  y <- sort(as.numeric(colnames(z)))
-  image(
-    x = x, y = y, z = z, col = cmocean('delta')(100),
-    xlab = 'Time', ylab = 'Chick'
-  )
+  image(volcano, col = cmocean('thermal')(100))
+  image(volcano, col = cmocean('Temperature', '0.03')(128))
+  image(volcano, col = cmocean('thermal', clip = .2)(256))
+  image(volcano, col = cmocean('thermal', start = .1, end = .7)(256))
+  image(volcano, col = cmocean('thermal', direction = -1)(256))
+  image(volcano, col = cmocean('thermal', alpha = .5)(256))
 }
 \keyword{ color }
 % vi:ts=2:et
