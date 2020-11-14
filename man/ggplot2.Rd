@@ -8,11 +8,11 @@
   in \pkg{ggplot2}.
 }
 \usage{
-  scale_color_cmocean(
+  scale_colour_cmocean(
     \dots, alpha = 1, start = 0, end = 1, direction = 1,
     discrete = FALSE, name = "thermal"
   )
-  scale_colour_cmocean(
+  scale_color_cmocean(
     \dots, alpha = 1, start = 0, end = 1, direction = 1,
     discrete = FALSE, name = "thermal"
   )
@@ -49,10 +49,11 @@
    }
 }
 \value{
-  A \code{ggplot} object to be added to other \code{ggplot} objects.
+  A \code{ggplot} object to be used with other \code{ggplot} objects.
 }
 \author{
-  As requested by Ilja Kocken in \url{https://github.com/aitap/cmocean/issues/5}.
+  As requested by Ilja Kocken in
+  \url{https://github.com/aitap/cmocean/issues/5}.
 }
 
 \seealso{
@@ -60,7 +61,7 @@
 }
 \examples{if (require('ggplot2')) {
   dat <- data.frame(
-    a = 1:10, b = 11:20, c = stats::rnorm(10)
+    a = 1:10, b = 11:20, c = rnorm(10)
   )
 
   ggplot(dat, aes(x = a, y = b, fill = c)) +
