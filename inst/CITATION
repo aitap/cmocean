@@ -1,0 +1,15 @@
+bibentry('Article',
+	title = 'True colors of oceanography: Guidelines for effective and accurate colormap selection',
+	author = c(
+		 person('Kristen M.', 'Thyng'),
+		 person('Chad A.', 'Greene'),
+		 person('Robert D.', 'Hetland'),
+		 person('Heather M.', 'Zimmerle'),
+		 person('Steven F.', 'DiMarco')
+	),
+	doi = '10.5670/oceanog.2016.66',
+	journal = 'Oceanography',
+	number = 3,
+	volume = 29,
+	year = 2016
+)
