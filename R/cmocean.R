@@ -2,6 +2,7 @@ cmocean <- function(
 	name, version = getOption('cmocean-version', '2.0'), clip = 0,
 	start = clip/2, end = 1 - clip/2, direction = 1, alpha = 1
 ) {
+        version <- match.arg(version, names(palettes))
         name <- match.arg(name, names(palettes[[version]]))
 	cols <- palettes[[version]][[name]]
 	ncols <- nrow(cols) - 1
