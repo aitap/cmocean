@@ -9,16 +9,16 @@
 }
 \usage{
   scale_colour_cmocean(
-    \dots, alpha = 1, start = 0, end = 1, direction = 1,
-    discrete = FALSE, name = "thermal"
+    \dots, alpha = 1, start = 0, end = 1, direction = 1, discrete = FALSE,
+    name = "thermal", version = getOption('cmocean-version', '2.0')
   )
   scale_color_cmocean(
-    \dots, alpha = 1, start = 0, end = 1, direction = 1,
-    discrete = FALSE, name = "thermal"
+    \dots, alpha = 1, start = 0, end = 1, direction = 1, discrete = FALSE,
+    name = "thermal", version = getOption('cmocean-version', '2.0')
   )
   scale_fill_cmocean(
-    \dots, alpha = 1, start = 0, end = 1, direction = 1,
-    discrete = FALSE, name = "thermal"
+    \dots, alpha = 1, start = 0, end = 1, direction = 1, discrete = FALSE,
+    name = "thermal", version = getOption('cmocean-version', '2.0')
   )
 }
 \arguments{
@@ -47,6 +47,11 @@
     the name of one of the available cmocean colormaps, see
     \code{\link{cmocean}} for the full list.
    }
+  \item{version}{
+    specific \code{cmocean} version you would like to use, passed as-is
+    to \code{\link{cmocean}}. Defaults to the latest available version
+    of the palette set.
+  }
 }
 \value{
   A \code{ggplot} object to be used with other \code{ggplot} objects.
