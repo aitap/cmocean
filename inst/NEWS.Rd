@@ -4,6 +4,7 @@
   \item Added helper functions \code{scale_color_cmocean},
   \code{scale_colour_cmocean}, \code{scale_fill_cmocean} for use with
   \pkg{ggplot2}
+  \item Added user-friendly argument checks to \code{cmocean}
   \item Documentation improvements
 }}
 \section{Changes in cmocean version 0.2 (2019-05-06)}{\itemize{
