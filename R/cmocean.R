@@ -13,7 +13,10 @@ cmocean <- function(
 	.checkmatch(version, names(palettes))
 	.checkmatch(name, names(palettes[[version]]))
 	.checkmatch(direction, c(-1, 1))
-	stopifnot(clip >= 0, clip < 1, alpha >= 0, alpha <= 1, start < end)
+	stopifnot(
+		clip >= 0, clip < 1, alpha >= 0, alpha <= 1,
+		start < end, start >= 0, start <= 1, end >= 0, end <= 1
+	)
 	cols <- palettes[[version]][[name]]
 	ncols <- nrow(cols) - 1
 	rows <- (ncols*start):(ncols*end)
