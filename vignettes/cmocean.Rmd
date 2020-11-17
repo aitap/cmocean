@@ -9,11 +9,9 @@ vignette: >
 
 This package contains an R version of the [`cmocean`](https://matplotlib.org/cmocean/) color palettes for oceanography, developed originally for python by Kristen Thyng. The important detail of all the `cmocean` palettes is that they are all perceptually uniform.
 
-Users interested in the the details of the original package development should consult the publication:
+Users interested in the the details of the original package development should consult the publication: [Thyng, K. M., Greene, C. A., Hetland, R. D., Zimmerle, H. M., & DiMarco, S. F. (2016). True colors of oceanography. Oceanography, 29(3), 10.][1]
 
-Thyng, K. M., Greene, C. A., Hetland, R. D., Zimmerle, H. M., & DiMarco, S. F. (2016). True colors of oceanography. Oceanography, 29(3), 10.
-
-link: http://tos.org/oceanography/assets/docs/29-3_thyng.pdf
+[1]: https://tos.org/oceanography/assets/docs/29-3_thyng.pdf
 
 Examples:
 =========
