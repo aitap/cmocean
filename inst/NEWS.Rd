@@ -1,5 +1,8 @@
 \name{NEWS}
 \title{News for Package 'cmocean'}
+\section{Changes in cmocean version 0.3-1 (2020-11-18)}{\itemize{
+  \item Fixed one remaining URL failing a redirect check
+}}
 \section{Changes in cmocean version 0.3 (2020-11-17)}{\itemize{
   \item Added helper functions \code{scale_color_cmocean},
   \code{scale_colour_cmocean}, \code{scale_fill_cmocean} for use with

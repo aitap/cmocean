@@ -1,7 +1,7 @@
 Package: cmocean
 Encoding: UTF-8
-Version: 0.3
-Date: 2020-11-17
+Version: 0.3-1
+Date: 2020-11-18
 Title: Beautiful Colour Maps for Oceanography
 Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Clark', 'Richards', email = 'clark.richards@gmail.com', role = 'ctb'), person('Ilja', 'Kocken', email = 'iljakocken <at> gmail.com', role = 'ctb'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
 Imports: grDevices
