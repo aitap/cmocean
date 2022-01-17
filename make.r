@@ -35,5 +35,5 @@ system('R CMD build .')
 pkg <- Sys.glob('cmocean_*.tar.gz')
 stopifnot(length(pkg) == 1)
 
-system(paste('R CMD check', pkg[1]))
-system(paste('R CMD INSTALL', pkg[1]))
+system(paste('R CMD check', pkg))
+system(paste('R CMD INSTALL', pkg))
