@@ -1,6 +1,8 @@
 ---
 title: "Beautiful colormaps for oceanography: cmocean"
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_vignette:
+    mathjax: NULL
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Beautiful colormaps for oceanography: cmocean}
