@@ -8,7 +8,6 @@ Imports: grDevices
 Depends: R (>= 3.0.0)
 Suggests: knitr, rmarkdown
 Enhances: ggplot2
-LazyData: no
 Description: Perceptually uniform palettes for commonly used
 	variables in oceanography as functions taking an integer
 	and producing character vectors of colours.
