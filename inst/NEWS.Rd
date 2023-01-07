@@ -1,7 +1,12 @@
 \name{NEWS}
 \title{News for Package 'cmocean'}
+\section{Changes in cmocean version 0.3-2 (2023-XX-XX)}{\itemize{
+  \item Omitted MathJax from the vignette, making it free from external
+  dependencies
+  \item Minor tweaks in the \code{DESCRIPTION} file
+}}
 \section{Changes in cmocean version 0.3-1 (2020-11-18)}{\itemize{
-  \item Fixed one remaining URL failing a redirect check
+  \item Fixed a URL failing a redirect check
   \item Added helper functions \code{scale_color_cmocean},
   \code{scale_colour_cmocean}, \code{scale_fill_cmocean} for use with
   \pkg{ggplot2}
