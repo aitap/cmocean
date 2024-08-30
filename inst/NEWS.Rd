@@ -1,9 +1,9 @@
 \name{NEWS}
 \title{News for Package 'cmocean'}
-\section{Changes in cmocean version 0.3-2 (2023-XX-XX)}{\itemize{
+\section{Changes in cmocean version 0.3-2 (2024-??-??)}{\itemize{
   \item Omitted MathJax from the vignette, making it free from external
   dependencies
-  \item Minor tweaks in the \code{DESCRIPTION} file
+  \item Various updates in the DESCRIPTION
 }}
 \section{Changes in cmocean version 0.3-1 (2020-11-18)}{\itemize{
   \item Fixed a URL failing a redirect check
