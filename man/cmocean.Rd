@@ -20,8 +20,9 @@ cmocean(
 
   \item{version}{
     specific \code{cmocean} version you would like to use; one of:
-    \code{"0.03"} \code{"0.1"} \code{"0.2"} \code{"0.2.1"} \code{"0.2.2"}
-    \code{"0.3"} \code{"1.0"} \code{"1.1"} \code{"1.2"} \code{"2.0"}.
+    \Sexpr[results=rd,stage=build]{
+      paste0('\\\code{"', names(cmocean:::palettes), '"}', collapse = ', ')
+    }.
     Alternatively, you can use \code{options(`cmocean-version` = "...")}
     to set the desired version as a global option. Explicitly
     set argument overrides the global option; the global option
