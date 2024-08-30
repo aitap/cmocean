@@ -1,7 +1,7 @@
 #!/usr/bin/Rscript
 palettes <- local({
 	lastwd <- setwd('cmocean-python')
-	on.exit({system('git checkout master'); setwd(lastwd)})
+	on.exit({system('git checkout main'); setwd(lastwd)})
 
 	lapply(setNames(nm = system('git tag -l --sort=version:refname', intern=T)), function(t) {
 		system(paste('git checkout', t))
@@ -12,6 +12,14 @@ palettes <- local({
 		)
 	})
 })
+names(palettes) <- sub('^v', '', names(palettes))
+stopifnot(
+	`Expecting no changes in palettes after 2.0` = vapply(
+		palettes[(which(names(palettes) == '2.0')+1):length(palettes)],
+		identical, FALSE, palettes[['2.0']]
+	)
+)
+palettes <- palettes[1:(which(names(palettes) == '2.0'))]
 
 save(palettes, file = 'R/sysdata.rda', version = 2, compress = 'xz')
 
@@ -28,12 +36,3 @@ contents[length(h0) - 2:0] <- as.raw(c(3, 6, 3))
 f <- xzfile('R/sysdata.rda', 'wb', compression = 9)
 writeBin(contents, f)
 close(f)
-
-unlink(Sys.glob('cmocean_*.tar.gz'))
-system('R CMD build .')
-
-pkg <- Sys.glob('cmocean_*.tar.gz')
-stopifnot(length(pkg) == 1)
-
-system(paste('R CMD check', pkg))
-system(paste('R CMD INSTALL', pkg))
