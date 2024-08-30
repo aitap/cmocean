@@ -15,5 +15,5 @@ Description: Perceptually uniform palettes for commonly used
 	the guidelines adhered to when creating the palettes.
 License: MIT + file LICENSE
 URL: https://matplotlib.org/cmocean/
-BugReports: https://github.com/aitap/cmocean
+BugReports: https://github.com/aitap/cmocean/issues
 VignetteBuilder: knitr, rmarkdown
