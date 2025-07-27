@@ -67,7 +67,7 @@ cmocean(
       Sequential, and might be used with dark blue representing
       lower salinity or fresher water, transitioning through
       greens to light yellow representing increased salinity or
-      saltier water. This colormap is based on matplotlib’s
+      saltier water. This colormap is based on matplotlib's
       \dQuote{YlGnBu}, but was recreated from scratch using the
       \sQuote{viscm} tool.
     }
@@ -136,11 +136,11 @@ cmocean(
       colormap is the negative half of the \code{curl} colormap.
     }
     \item{phase (>= 1.0), Phase (< 1.0)}{
-      Circular, spanning all hues at a set lightness value.
-      This map is intended to be used for properties such as
-      wave phase and tidal phase which wrap around from 0° to
-      360° to 0° and should be represented without major
-      perceptual jumps in the colormap.
+      Circular, spanning all hues at a set lightness value.  This map is
+      intended to be used for properties such as wave phase and tidal
+      phase which wrap around from \eqn{0^\circ}{0 deg} to
+      \eqn{360^\circ}{360 deg} to \eqn{0^\circ}{0 deg} and should be
+      represented without major perceptual jumps in the colormap.
     }
     \item{balance (>= 1.0), FreeSurface (< 1.0)}{
       Diverging with dark blue to off-white to dark red
